@@ -266,7 +266,13 @@ var pal=D.createElement('div');pal.className='ov';pal.id='pal';pal.innerHTML='<d
 var pi=$('#pi'),pl=$('#pl'),ps2=0,vis=[];
 function pr(){var q=pi.value.toLowerCase();vis=PL.filter(function(c){return c[0].toLowerCase().indexOf(q)>-1});ps2=Math.min(ps2,Math.max(0,vis.length-1));pl.innerHTML='';vis.forEach(function(c,i){var b=D.createElement('button');b.type='button';b.className='pi'+(i===ps2?' sel':'');b.textContent=c[0];b.addEventListener('click',function(){run(c)});pl.appendChild(b)});if(!vis.length)pl.textContent='No match — try “coffee” or “snake”';var s=$('.sel',pl);if(s)s.scrollIntoView({block:'nearest'})}
 function run(c){pc();c[1]()}
-function po(){pal.classList.add('on');pi.value='';ps2=0;pr();pi.focus()}
+function po(){
+  pal.classList.add('on');
+  pi.value='';
+  ps2=0;
+  pr();
+  pi.focus();
+}
 function pc(){pal.classList.remove('on')}
 pi.addEventListener('input',function(){ps2=0;pr()});
 pal.addEventListener('click',function(e){if(e.target===pal||e.target.closest('.wh button'))pc()});
