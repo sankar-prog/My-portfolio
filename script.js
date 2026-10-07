@@ -271,7 +271,7 @@ function po(){
   pi.value='';
   ps2=0;
   pr();
-  pi.focus();
+
 }
 function pc(){pal.classList.remove('on')}
 pi.addEventListener('input',function(){ps2=0;pr()});
