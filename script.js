@@ -127,6 +127,7 @@ function openG(){closeT();if(!gm){gm=mk('<div class="win"><div class="wh"><i></i
 function closeG(){if(gm){clearInterval(iv);gon=0;gm.classList.remove('on');sync()}}
 var DIR={ArrowUp:[0,-1],w:[0,-1],ArrowDown:[0,1],s:[0,1],ArrowLeft:[-1,0],a:[-1,0],ArrowRight:[1,0],d:[1,0]};
 
+
 /* ---------- global secrets: ` terminal, Konami, typed words ---------- */
 var KK=['arrowup','arrowup','arrowdown','arrowdown','arrowleft','arrowright','arrowleft','arrowright','b','a'],kp=0,KB='';
 addEventListener('keydown',function(e){var g=e.target.tagName;
