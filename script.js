@@ -126,7 +126,7 @@ function openG(){closeT();if(!gm){gm=mk('<div class="win"><div class="wh"><i></i
  gm.classList.add('on');sync();gReset();draw();gmsg.textContent='Press Enter or tap to start\nEat the bugs 🐛'}
 function closeG(){if(gm){clearInterval(iv);gon=0;gm.classList.remove('on');sync()}}
 var DIR={ArrowUp:[0,-1],w:[0,-1],ArrowDown:[0,1],s:[0,1],ArrowLeft:[-1,0],a:[-1,0],ArrowRight:[1,0],d:[1,0]};
-            
+
 /* ---------- global secrets: ` terminal, Konami, typed words ---------- */
 var KK=['arrowup','arrowup','arrowdown','arrowdown','arrowleft','arrowright','arrowleft','arrowright','b','a'],kp=0,KB='';
 addEventListener('keydown',function(e){var g=e.target.tagName;
@@ -134,7 +134,7 @@ addEventListener('keydown',function(e){var g=e.target.tagName;
  if(g==='INPUT'||g==='TEXTAREA')return;
  if(e.key==='`'||e.key==='~'){e.preventDefault();tm&&tm.classList.contains('on')?closeT():openT();return}
  var k=e.key.toLowerCase();kp=k===KK[kp]?kp+1:(k===KK[0]?1:0);if(kp===KK.length){kp=0;party()}
- if(e.key.length===1){KB=(KB+k).slice(-8);[['snake',openG],['sankar',wobble],['coffee',coffee],['party',party]].forEach(function(z){if(KB.slice(-z[0].length)===z[0]){KB='';z[1]()}})}});
+ if(e.key.length===1){KB=(KB+k).slice(-8);[['snake',openG],['matrix',matrix],['disco',disco],['rocket',rocket],['roll',roll],['espresso',function(){caf=10;cafUp()}],['decaf',function(){caf=0;cafUp()}],['bugs',bugRush],['quack',duckSay],['joke',duckSay],['sankar',wobble],['coffee',coffee],['party',party]].forEach(function(z){if(KB.slice(-z[0].length)===z[0]){KB='';z[1]()}})}});
 var lgc=0,lgt=0;$('.logo').addEventListener('click',function(){var n=Date.now();lgc=n-lgt<900?lgc+1:1;lgt=n;if(lgc>=5){lgc=0;toast('🔓 Developer mode unlocked');openT()}});
 
 /* ---------- small details ---------- */
