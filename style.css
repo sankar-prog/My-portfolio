@@ -29,7 +29,7 @@ h2 em{font-style:normal;background:var(--lime);color:#111;padding:0 .14em;border
 .mut{color:var(--mut)}.c .mut{color:rgba(17,17,17,.72)}
 .t p{font-size:clamp(15px,1.5vw,17px)}
 .t h3{font-size:clamp(26px,3.3vw,40px);line-height:1;letter-spacing:-.04em;text-transform:uppercase;margin:14px 0 10px}
-.chip{display:inline-block;padding:4px 12px;border:2.5px solid currentColor;border-radius:99px;font:500 12px var(--m)}
+.chip{display:inline-block;padding:4px 12px;border:2.5px solid currentColor;text-align: center;border-radius:99px;font:500 12px var(--m)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .act{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:22px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border:3px solid var(--ink);border-radius:99px;font:700 15px var(--f);color:var(--ink);background:var(--card);text-decoration:none;cursor:pointer;box-shadow:4px 4px 0 var(--ink);transition:transform .15s,box-shadow .15s}
